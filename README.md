@@ -1,4 +1,4 @@
-# Day 03 – Piscine .NET
+# Day 03 – .NET Boot camp
 ### Harder, Better, Faster, YAML
 
 # Contents
