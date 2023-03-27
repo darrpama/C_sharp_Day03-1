@@ -41,7 +41,6 @@
 # Chapter II
 ##  Rules of the Day
 
-- You cannot use nuget packages.
 - All projects must be in the same solution.
 - Use **top-level-statements**  and **var**.
 - The names of the solution and its project (and its separate catalog) should look like d{xx}, where xx is the digits of the current day
