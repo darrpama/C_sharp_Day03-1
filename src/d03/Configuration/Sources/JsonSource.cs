@@ -7,8 +7,11 @@ public class JsonSource : IConfigurationSource
         this.filePath = filePath;
     }
 
-    public Dictionary<> LoadParams()
+    public Dictionary<string, string> LoadParams()
     {
-        return new Dictionary<string, string>();
+        return new Dictionary<string, string>()
+        {
+            {"Aboba", "Ababa"}
+        };
     }
 }

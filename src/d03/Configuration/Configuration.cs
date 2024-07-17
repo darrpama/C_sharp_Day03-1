@@ -13,5 +13,5 @@ public class Configuration {
         }
     }
 
-    public Dictionary<string, string> Params { get; private set }
+    public Dictionary<string, string> Params { get; private set; }
 }
