@@ -2,7 +2,7 @@ using System.Collections;
 public class Configuration {
     public Configuration(List<IConfigurationSource> sources)
     {
-        Params = new Dictionary<string, string>();
+        Params = new Dictionary<string, object>();
         foreach (var source in sources)
         {
             var loadedParams = source.LoadParams();
@@ -13,5 +13,5 @@ public class Configuration {
         }
     }
 
-    public Dictionary<string, string> Params { get; private set; }
+    public Dictionary<string, object> Params { get; private set; }
 }

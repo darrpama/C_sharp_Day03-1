@@ -1,3 +1,3 @@
 public interface IConfigurationSource {
-    Dictionary<string, string> LoadParams();
+    Dictionary<string, object> LoadParams();
 }

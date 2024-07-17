@@ -7,9 +7,9 @@ public class YamlSource : IConfigurationSource
         this.filePath = filePath;
     }
 
-    public Dictionary<string, string> LoadParams()
+    public Dictionary<string, object> LoadParams()
     {
-        return new Dictionary<string, string>()
+        return new Dictionary<string, object>()
         {
             {"Ababa", "Aboba"}
         };

@@ -1,3 +1,5 @@
+using System.Text.Json;
+
 public class JsonSource : IConfigurationSource
 {
     private string filePath;
@@ -7,11 +9,20 @@ public class JsonSource : IConfigurationSource
         this.filePath = filePath;
     }
 
-    public Dictionary<string, string> LoadParams()
+    public Dictionary<string, object> LoadParams()
     {
-        return new Dictionary<string, string>()
+        Dictionary<string, object> result = new Dictionary<string, object>();
+        try
         {
-            {"Aboba", "Ababa"}
-        };
+            using (FileStream fs = new FileStream(filePath, FileMode.Open, FileAccess.Read))
+            {
+                result = JsonSerializer.Deserialize<Dictionary<string, object>>(fs);
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine(ex.ToString());
+        }
+        return result;
     }
 }
